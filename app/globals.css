@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --card: #0f172a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 20% 0%, rgba(37, 99, 235, 0.15), transparent),
+              radial-gradient(1000px 700px at 80% 10%, rgba(34, 211, 238, 0.12), transparent),
+              var(--bg);
+  color: var(--text);
+}
+
+.container-slim {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-slate-900/60 backdrop-blur border border-slate-800 rounded-xl shadow-lg;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-brand-600 hover:bg-brand-500 text-white;
+}
+.btn-muted {
+  @apply bg-slate-800 hover:bg-slate-700 text-slate-100;
+}
+.input, .textarea, .select {
+  @apply w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 placeholder-slate-400 text-slate-100 outline-none focus:ring-2 focus:ring-brand-500/50;
+}
+.label {
+  @apply block text-sm font-medium text-slate-300 mb-1;
+}
+.helper {
+  @apply text-xs text-slate-400;
+}
+.section-title {
+  @apply text-2xl font-semibold tracking-tight;
+}
